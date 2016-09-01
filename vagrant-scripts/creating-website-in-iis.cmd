@@ -6,5 +6,6 @@ C:\Windows\System32\inetsrv\appcmd.exe add apppool /name:website /managedRuntime
 echo Creating website...
 C:\Windows\System32\inetsrv\appcmd.exe add site /name:website /physicalPath:C:\website /bindings:http/*:1025:
 C:\Windows\System32\inetsrv\appcmd.exe set app "website/" /applicationPool:"website"
+C:\Windows\System32\inetsrv\appcmd set config website /section:directoryBrowse /enabled:true
 
 echo Website is created. You can acces it by url http://127.0.0.1:1025/
